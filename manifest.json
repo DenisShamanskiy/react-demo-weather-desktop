@@ -1,0 +1,15 @@
+{
+  "background_color": "#8dc6ff",
+  "display": "standalone",
+  "lang": "ru-Ru",
+  "name": "React Demo Weather",
+  "short_name": "Weather",
+  "start_url": "https://denisshamanskiy.github.io/react-demo-weather",
+  "icons": [
+    {
+      "src": "favicons/google-touch-icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
