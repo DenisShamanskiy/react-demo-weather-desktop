@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/react-demo-weather-desktop/static/js/main.1c931778.js",
+    "main.js": "/react-demo-weather-desktop/static/js/main.765d1623.js",
     "static/media/barometer.svg": "/react-demo-weather-desktop/static/media/barometer.d458531a662777496af7add0567c0127.svg",
     "static/media/No-Cloud-Security.svg": "/react-demo-weather-desktop/static/media/No-Cloud-Security.aee4c44f352a66b7b4665d57f9db7023.svg",
     "static/media/fallout.svg": "/react-demo-weather-desktop/static/media/fallout.ab298e8dd14a9e9455ae4142d5fae851.svg",
@@ -18,9 +18,9 @@
     "static/media/plus-circle.svg": "/react-demo-weather-desktop/static/media/plus-circle.b17567d34e9c93e07243549951bffc53.svg",
     "static/media/search.svg": "/react-demo-weather-desktop/static/media/search.60a61a8c9476ac944225fa032d8b8aa6.svg",
     "static/media/dash-circle.svg": "/react-demo-weather-desktop/static/media/dash-circle.4ba348147757cc03172220a22cac0818.svg",
-    "main.1c931778.js.map": "/react-demo-weather-desktop/static/js/main.1c931778.js.map"
+    "main.765d1623.js.map": "/react-demo-weather-desktop/static/js/main.765d1623.js.map"
   },
   "entrypoints": [
-    "static/js/main.1c931778.js"
+    "static/js/main.765d1623.js"
   ]
 }
