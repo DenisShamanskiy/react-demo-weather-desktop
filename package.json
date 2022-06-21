@@ -36,6 +36,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
+  "homepage": "https://denisshamanskiy.github.io/react-demo-weather-desktop/",
   "eslintConfig": {
     "extends": [
       "react-app",

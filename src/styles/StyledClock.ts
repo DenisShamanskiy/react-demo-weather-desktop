@@ -13,7 +13,7 @@ const mymove = keyframes`
     }	
 `;
 
-const Clock = styled.div`
+const CityTime = styled.div`
     height: 20px;
     margin: 0 ;
     font-weight: 600;
@@ -48,4 +48,4 @@ const Greeting = styled.p`
     color: var(--Vista-Blue);;
 `;
 
-export { Clock, StyledClockLocal, LocalTime, Col, CurrentDate, Greeting };
+export { CityTime, StyledClockLocal, LocalTime, Col, CurrentDate, Greeting };

@@ -1,12 +1,17 @@
 import React, { useEffect } from "react";
-import GlobalStyles from "styles/Global";
+import styled from "styled-components";
 import { useDispatch } from "react-redux";
 import { getLocalWeather } from "redux/actions";
 import { useAppSelector } from "redux/hooks/useTypedSelector";
-import StyledApp from "styles/StyledApp";
+import GlobalStyles from "styles/Global";
+import SectionOne from "components/SectionOne";
+import SectionTwo from "components/SectionTwo";
 import CustomPopup from "components/CustomPopup";
-import Section_1 from "components/Section_1";
-import Section_2 from "components/Section_2";
+
+const Container = styled.div`
+  width: 1280px;
+  display: flex;
+`;
 
 const App: React.FC = () => {
 
@@ -16,18 +21,18 @@ const App: React.FC = () => {
 
   useEffect(() => {
     dispatch(getLocalWeather())
-  }, []);  
+  }, [dispatch]);  
   
   return (
     <>
       <GlobalStyles />
 
-      {show ? <CustomPopup /> : "" }
+      { show && <CustomPopup/> }
 
-      <StyledApp>
-        <Section_1></Section_1>
-        <Section_2></Section_2>
-      </StyledApp>
+      <Container>
+        <SectionOne></SectionOne>
+        <SectionTwo></SectionTwo>
+      </Container>
     </>
   );
 }

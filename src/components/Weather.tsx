@@ -1,7 +1,7 @@
 import React from "react";
 import { useAppSelector } from "redux/hooks/useTypedSelector";
 import { StateCurrentWeather } from "redux/types";
-import { formatePressure, formateToUpperCase, formateVisibility } from "utils/functions";
+import { formatePressure, formateToUpperCase, formateVisibility, getIcon } from "utils/functions";
 import {
   Container,
   City,
@@ -16,10 +16,9 @@ import {
 import Hourly from "./Hourly";
 import ClockCity from "./ClockCity";
 
-const Weather: React.FC = (): React.ReactElement => {
+const Weather: React.FC = () => {
 
   const data: StateCurrentWeather = useAppSelector(state => state.currentWeather)
-  const { loading } = useAppSelector(state => state.loading)
   const timezone = useAppSelector(state => state.oneCall.timezone)
   
   const {
@@ -36,7 +35,7 @@ const Weather: React.FC = (): React.ReactElement => {
 
       <City>{name}</City>
 
-      {!loading && <Icon src={`https://openweathermap.org/img/wn/${icon}@2x.png`} alt="Иконка погоды"/>}
+      <Icon src={getIcon(icon)} alt="Иконка погоды"/>
 
       <Temperature>{Math.round(temp)}°</Temperature>
       
@@ -57,7 +56,7 @@ const Weather: React.FC = (): React.ReactElement => {
       </Detail>
       </Wrapper>
 
-      <Hourly></Hourly>
+      <Hourly/>
 
     </Container>
   );

@@ -47,8 +47,14 @@ export default createGlobalStyle`
   --green: #FED1C4;
   --green-text: #c2fcd9;
   --black: #55586B;
+  // Loader //
+
+
+
+  
   /* Border */
   --br-20: 20px;
+  --br-loader: 15px;
   --radius-main: 10px;
   --border-color: #b1bed5;
   /* Фон */

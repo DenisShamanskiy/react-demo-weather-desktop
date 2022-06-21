@@ -1,6 +1,5 @@
 import React from "react";
 import { useAppSelector } from "redux/hooks/useTypedSelector";
-import LoaderDaily from "components/Loader/LoaderDaily";
 import {
   Container,
   List,
@@ -11,19 +10,24 @@ import {
   ErrorBlock,
 } from "../styles/StyledDaily";
 import formate from "../utils/formate";
+import { POPUP_ALERT_VISIBILITY } from "redux/constants";
+import { useDispatch } from "react-redux";
 
 const Daily1280: React.FC = (): React.ReactElement => {
   
-  const { loading } = useAppSelector(state => state.loading)
   const data = useAppSelector(state => state.oneCall.daily)
   const error = useAppSelector(state => state.errors.errorOneCall)
 
-  return (
-    loading ? 
+  const dispatch = useDispatch()
 
-    <LoaderDaily /> :
-    
-    <Container>
+  const handleClick = (i: any) => {
+    console.log(i);
+    dispatch({type: POPUP_ALERT_VISIBILITY})
+  
+  }
+
+  return (
+   <Container>
       <>
 
       {error ? <ErrorBlock/> : 
@@ -31,7 +35,7 @@ const Daily1280: React.FC = (): React.ReactElement => {
       <List>
         {data.map(({ temp: { day }, weather, dt }, index) => { 
           return (
-            <Item key={index}>
+            <Item key={index} onClick={() => handleClick(data[index])}>
               <Icon
                 src={`https://openweathermap.org/img/wn/${weather[0].icon}@2x.png`}
                 alt="Иконка погоды"

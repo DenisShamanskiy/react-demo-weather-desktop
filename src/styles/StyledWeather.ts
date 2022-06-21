@@ -4,7 +4,7 @@ const Container = styled.div`
   grid-column: 1 / 2;
   grid-row: 2 / 7;
   width: 100%;
-  margin: 0 0 30px 0;
+  margin: 0;
   height: 600px;
   padding: 15px;
   display: flex;

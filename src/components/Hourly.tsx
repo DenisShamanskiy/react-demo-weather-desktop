@@ -11,26 +11,14 @@ import ScrollHorizontal from "./ScrollHorizontal";
 import formate from "../utils/formate";
 import { useAppSelector } from "redux/hooks/useTypedSelector";
 import { StateOneCall } from "redux/types";
-import LoaderHourly from "components/Loader/LoaderHourly";
-
-// interface IHourlyProps {
-//   hourlyWeather: any[],
-//   timeZone: any
-// }
 
 const Hourly1280: React.FC = (): React.ReactElement => {
-  // console.log(hourlyWeather);
 
-  const { loading } = useAppSelector(state => state.loading)
   const data: StateOneCall = useAppSelector(state => state.oneCall)
 
   const hourlyWeather = data.hourly.slice(0, 25)
 
   return (
-    loading ? 
-
-    <LoaderHourly /> :
-    
     <Container>
       <ScrollHorizontal List={List}>
         {hourlyWeather.map(({ temp, weather, dt }, index) => {

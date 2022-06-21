@@ -1,5 +1,4 @@
 import { useAppSelector } from "redux/hooks/useTypedSelector";
-import LoaderAirPollution from "components/Loader/LoaderAirPollution";
 import {
   Container,
   Title,
@@ -15,7 +14,6 @@ import { getDescriptionCAQI } from "utils/functions";
 
 const AirPollution: React.FC = (): React.ReactElement => {
 
-  const { loading } = useAppSelector(state => state.loading)
   const { components, main: { aqi } } = useAppSelector(state => state.airPollution)
   const error = useAppSelector(state => state.errors.errorAirPollution)
 
@@ -47,11 +45,7 @@ const AirPollution: React.FC = (): React.ReactElement => {
 
 
   return (
-    loading ? 
-
-    <LoaderAirPollution/> :
-    
-    <Container>
+   <Container>
       <Title>Загрязнение воздуха</Title>
       
       <Wrapper>

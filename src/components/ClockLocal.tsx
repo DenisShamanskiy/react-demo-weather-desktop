@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Col, CurrentDate, Greeting, LocalTime, StyledClockLocal } from "styles/StyledClock";
 import { daysWeekLong, monthNames } from "utils/constants";
-import { formateDayWeek, formateLocalTime, greeting } from "utils/functions";
+import { formateDayWeek, formateTime24, greeting } from "utils/functions";
 
 const ClockLocal: React.FC = (): React.ReactElement => {
 
@@ -11,14 +11,14 @@ useEffect(() => {
 
   const interval = setInterval(() => {
     setDate(new Date());
-    }, 2000);
+    }, 5000);
       
     return () => clearInterval(interval);
   }, []);
 
 return (
     <StyledClockLocal>
-      <LocalTime>{formateLocalTime(date.getHours())}<Col>:</Col>{formateLocalTime(date.getMinutes())}</LocalTime>
+      <LocalTime>{formateTime24(date.getHours())}<Col>:</Col>{formateTime24(date.getMinutes())}</LocalTime>
       <CurrentDate>{formateDayWeek(daysWeekLong, monthNames)}</CurrentDate>
       <Greeting>{greeting(date.getHours())}</Greeting>
     </StyledClockLocal>
