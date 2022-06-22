@@ -18,11 +18,11 @@ export const formateDayWeek = (dayArr: string[], monthArr: string[]): string => 
 }
 
 export const greeting = (data: number): string => {
-    if (4 < data && data <= 11) {
+    if (4 <= data && data <= 11) {
         return "Доброе утро"
-    } else if (12 < data && data <= 16 ) {
+    } else if (12 <= data && data <= 16 ) {
         return "Добрый день"
-    } else if (17 < data && data <= 23 ) {
+    } else if (17 <= data && data <= 23 ) {
         return "Добрый вечер"
     } 
     return "Доброй ночи"

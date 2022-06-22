@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { getCityWeather } from "redux/actions";
-import { StyledSearch, Input, Button } from "../styles/StyledSearch1280";
+import { Form, Input, Button } from "../styles/StyledSearch";
 
-const Search: React.FC = (): React.ReactElement => {
+const Search: React.FC = () => {
+
   const dispatch = useDispatch()
   
   const [city, setCity] = useState("");
@@ -11,6 +12,7 @@ const Search: React.FC = (): React.ReactElement => {
   function handleChange(event: React.ChangeEvent<HTMLInputElement>) {
     setCity(event.target.value);
   }
+
   function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
     dispatch(getCityWeather(city.trim()));
@@ -18,8 +20,7 @@ const Search: React.FC = (): React.ReactElement => {
   }
 
   return (
-    <>
-      <StyledSearch role="search" onSubmit={handleSubmit}>
+      <Form role="search" onSubmit={handleSubmit}>
         <Input
           type="search"
           value={city}
@@ -28,8 +29,7 @@ const Search: React.FC = (): React.ReactElement => {
           required
         />
         <Button type="submit"></Button>
-      </StyledSearch>
-    </>
+      </Form>
   );
 }
 

@@ -10,11 +10,11 @@ import {
 import ScrollHorizontal from "./ScrollHorizontal";
 import formate from "../utils/formate";
 import { useAppSelector } from "redux/hooks/useTypedSelector";
-import { StateOneCall } from "redux/types";
+import { getIcon } from "utils/functions";
 
-const Hourly1280: React.FC = (): React.ReactElement => {
+const Hourly: React.FC = () => {
 
-  const data: StateOneCall = useAppSelector(state => state.oneCall)
+  const data = useAppSelector(state => state.oneCall)
 
   const hourlyWeather = data.hourly.slice(0, 25)
 
@@ -26,7 +26,7 @@ const Hourly1280: React.FC = (): React.ReactElement => {
             <Item key={index}>
               <Time>{index === 0 ? "Сейчас" : formate.time(dt, data.timezone_offset)}</Time>
               <Icon
-                src={`https://openweathermap.org/img/wn/${weather[0].icon}@2x.png`}
+                src={getIcon(weather[0].icon)}
                 alt="Иконка погоды"
               />
               <Temperature>{`${Math.round(temp)}°`}</Temperature>
@@ -38,4 +38,4 @@ const Hourly1280: React.FC = (): React.ReactElement => {
   );
 }
 
-export default Hourly1280
+export default Hourly

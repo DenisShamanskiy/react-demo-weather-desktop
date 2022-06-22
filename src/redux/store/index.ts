@@ -1,5 +1,5 @@
 import { composeWithDevTools } from "@redux-devtools/extension";
-import {compose, createStore, combineReducers, applyMiddleware} from "redux";
+import {compose, legacy_createStore as createStore, combineReducers, applyMiddleware} from "redux";
 import createSagaMiddleware from 'redux-saga'
 import { popupAlertReducer } from "./popupAlertReducer";
 import { airPollutionReducer } from "./airPollutionReducer";

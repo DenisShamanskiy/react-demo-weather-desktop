@@ -12,14 +12,12 @@ const ClockCity: React.FC = () => {
   const [hours, setHours] = useState(new Date(Date.now() + shift).getHours());
   const [minutes, setMinutes] = useState(new Date().getMinutes());
 
-useEffect(() => {
-
-  const interval = setInterval(() => {
-    setHours(new Date(Date.now() + shift).getHours());
-    setMinutes(new Date().getMinutes());
-    }, 5000);
-      
-    return () => clearInterval(interval);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setHours(new Date(Date.now() + shift).getHours());
+      setMinutes(new Date().getMinutes());
+      }, 5000);
+      return () => clearInterval(interval);
   }, [shift]);
 
 return (

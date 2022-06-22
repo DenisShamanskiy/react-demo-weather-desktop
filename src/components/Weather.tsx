@@ -1,6 +1,5 @@
 import React from "react";
 import { useAppSelector } from "redux/hooks/useTypedSelector";
-import { StateCurrentWeather } from "redux/types";
 import { formatePressure, formateToUpperCase, formateVisibility, getIcon } from "utils/functions";
 import {
   Container,
@@ -18,7 +17,7 @@ import ClockCity from "./ClockCity";
 
 const Weather: React.FC = () => {
 
-  const data: StateCurrentWeather = useAppSelector(state => state.currentWeather)
+  const data = useAppSelector(state => state.currentWeather)
   const timezone = useAppSelector(state => state.oneCall.timezone)
   
   const {

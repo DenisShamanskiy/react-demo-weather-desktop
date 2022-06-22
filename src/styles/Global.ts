@@ -3,13 +3,7 @@ import { createGlobalStyle } from "styled-components";
 export default createGlobalStyle`
 
 :root {
-  /* Шрифт */
   --Nunito: 'Nunito', sans-serif;
-
-  --f-s-x-small: 0.5rem;
-  --f-s-n-small: 0.7rem;
-  --f-s-b-small: 0.8rem;
-  --f-s-n-normal: 1rem;
 
   /* Цвет */
   --Baby-Blue: #8BD2EC;
@@ -31,16 +25,6 @@ export default createGlobalStyle`
   --Dust-Storm: #E6CFC8;
   --Eggshell: #F3E5D6;
   ////////
-  --first: #8dc6ff;
-  --second: #9eefff;
-  
-  --fourth: #dc552c;
-
-  --first1280: #defcf9;
-  --second1280: #cadefc;
-  --third1280: #c3bef0;
-  --fourth1280: #cca8e9;
-
   --blue: #8dc6ff;
   --pink: #f1c6de;
   --orange: #fecea8;
@@ -67,7 +51,7 @@ export default createGlobalStyle`
 }
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 *::before,
