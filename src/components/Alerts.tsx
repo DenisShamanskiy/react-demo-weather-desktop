@@ -6,13 +6,11 @@ import {
   Header,
   Content,
   Item,
-  Description,
   Event,
   Text,
-  BoxShadow,
 } from "../styles/StyledAlerts";
 
-const Alerts: React.FC = (): React.ReactElement => {
+const Alerts: React.FC = () => {
 
   const [open, setOpen] = useState(false);
   
@@ -30,25 +28,18 @@ const Alerts: React.FC = (): React.ReactElement => {
       <Header open={open}>
         {data[0].sender_name ? data[0].sender_name : "Росгидромет предупреждает:"}
       </Header>
-
       <Content open={open}>
         {handleData(data).map(
           ({ description, event }: any, index: React.Key | null | undefined) => {
             return (
               <Item key={index}>
-                <Description>
-                  <Event>{event}.</Event>
-                  <Text>
-                    {description[0].toUpperCase() + description.slice(1)}
-                  </Text>
-                </Description>
+                <Event>{event}</Event>
+                <Text>{description[0].toUpperCase() + description.slice(1)}</Text>
               </Item>
             );
           }
         )}
-
       </Content>
-      <BoxShadow/>
     </StyledAlerts>
   );
 }

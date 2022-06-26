@@ -14,24 +14,22 @@ const Container = styled.div`
     grid-row: 7 / 9;
     margin: 0;
     padding: 15px;
+    border-radius: var(--br-20);
     display: flex;
     flex-direction: column;
-    border-radius: var(--br-20);
-    background-color: #ecf2f9;
+    background-color: var(--Lotion);
 `;
 const Wrapper = styled.div`
     height: 100%;
     margin: 0;
     padding: 15px;
-    /* border: 1px solid red; */
+    border-radius: var(--br-20);
     display: grid;
     grid-template-columns: 1fr 90px;
     grid-template-rows: 1fr 1fr;
     justify-content: center;
     align-items: center;
-    background-color: #D0EAFA;
-    border-radius: var(--br-20);
-
+    background-color: var(--Diamond);
 `;
 const Value = styled.p`
     grid-column: 1 / 2;
@@ -45,19 +43,20 @@ const Compass = styled.div`
     width: 90px;
     height: 90px;
     margin: auto;
+    border: 2px solid;
+    border-radius: 100%;
     display: grid;
     grid-template-columns: 1rem 1fr 1rem;
     grid-template-rows: 1rem 1fr 1rem;
     justify-items: center;
     align-items: center;
-    border: 2px solid;
-    border-radius: 100%;
 `;
 const North = styled.p`
-    margin: 0;
     grid-column: 2 / 3;
     grid-row: 1 / 2;
-    font-size: 0.7rem;
+    margin: 0;
+    font-size: 11px;
+    font-weight: 800;
 `;
 const East = styled(North)`
     grid-column: 3 / 4;
@@ -72,10 +71,10 @@ const South = styled(North)`
     grid-row: 3 / 4;
 `;
 const CompassArrow = styled.div<{deg: number}>`
-    width: 100%;
-    height: 100%;
     grid-column: 2 / 3;
     grid-row: 2 / 3;
+    width: 100%;
+    height: 100%;
     background-image: url(${Arrow});
     background-repeat: no-repeat;
     background-position: center;

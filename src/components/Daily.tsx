@@ -1,5 +1,7 @@
 import React from "react";
+import { useDispatch } from "react-redux";
 import { useAppSelector } from "redux/hooks/useTypedSelector";
+import formate from "../utils/formate";
 import {
   Container,
   List,
@@ -7,16 +9,13 @@ import {
   Day,
   Icon,
   Temperature,
-  ErrorBlock,
 } from "../styles/StyledDaily";
-import formate from "../utils/formate";
 import { POPUP_ALERT_VISIBILITY } from "redux/constants";
-import { useDispatch } from "react-redux";
+import { getIcon } from "utils/functions";
 
-const Daily1280: React.FC = (): React.ReactElement => {
+const Daily: React.FC = () => {
   
   const data = useAppSelector(state => state.oneCall.daily)
-  const error = useAppSelector(state => state.errors.errorOneCall)
 
   const dispatch = useDispatch()
 
@@ -25,19 +24,18 @@ const Daily1280: React.FC = (): React.ReactElement => {
     dispatch({type: POPUP_ALERT_VISIBILITY})
   
   }
+  
+console.log(data);
+
 
   return (
    <Container>
-      <>
-
-      {error ? <ErrorBlock/> : 
-
       <List>
         {data.map(({ temp: { day }, weather, dt }, index) => { 
           return (
             <Item key={index} onClick={() => handleClick(data[index])}>
               <Icon
-                src={`https://openweathermap.org/img/wn/${weather[0].icon}@2x.png`}
+                src={getIcon(weather[0].icon)}
                 alt="Иконка погоды"
               />
               <Day>
@@ -51,10 +49,9 @@ const Daily1280: React.FC = (): React.ReactElement => {
             </Item>
           );
         })}
-      </List>}
-    </>
+      </List>
     </Container>
   );
 }
 
-export default Daily1280
+export default Daily

@@ -3,7 +3,7 @@ import { useAppSelector } from "redux/hooks/useTypedSelector";
 import { Container, Text, Time, Wrapper, IconSunrise, IconSunset, Title, Background, Description } from "styles/StyledSunrise&Sunset";
 import formate from "utils/formate";
 
-const SunriseAndSunset: React.FC = (): React.ReactElement => {
+const SunriseAndSunset: React.FC = () => {
     
     const { timezone, sys: { sunrise, sunset } } = useAppSelector(state => state.currentWeather)
     

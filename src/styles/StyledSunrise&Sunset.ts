@@ -7,10 +7,10 @@ const Container = styled.div`
     grid-row: 7 / 9;
     margin: 0;
     padding: 15px;
+    border-radius: var(--br-20);
     display: flex;
     flex-direction: column;
-    border-radius: var(--br-20);
-    background-color: #ecf2f9;
+    background-color: var(--Lotion);
 `;
 const Title = styled.h2`
     margin: 0 0 15px 0;
@@ -19,10 +19,10 @@ const Title = styled.h2`
 const Background = styled.div`
     height: 100%;
     padding: 15px;
+    border-radius: var(--br-20);
     display: flex;
     align-items: center;
-    border-radius: var(--br-20);
-    background-color: #F6E2C5;
+    background-color: var(--Banana-Mania);
 `;
 const Wrapper = styled.div`
     width: 100%;
@@ -47,15 +47,15 @@ const IconSunset = styled(IconSunrise)`
     background-image: url(${sunset});
 `;
 const Text = styled.p`
-  margin: 0 0 8px 5px;
-  font-size: 16px;
-  font-weight: 300;
+    margin: 0 0 8px 5px;
+    font-size: 16px;
+    font-weight: 300;
 `;
 const Time = styled.p`
-  margin: 0 0 auto 5px;
-  font-size: 22px;
-  font-weight: 300;
-  color: var(--Vista-Blue);
+    margin: 0 0 auto 5px;
+    color: var(--Vista-Blue);
+    font-size: 22px;
+    font-weight: 300;
 `;
 
 export {

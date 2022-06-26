@@ -5,7 +5,7 @@ import { Container } from "styles/StyledSectionOne";
 import AirPollution from "./AirPollution";
 import Alerts from "./Alerts";
 import ClockLocal from "./ClockLocal";
-import Daily1280 from "./Daily";
+import Daily from "./Daily";
 import LoaderSectionOne from "./Loader/LoaderSectionOne";
 import Precipitation from "./Precipitation";
 import SunriseAndSunset from "./SunriseAndSunset";
@@ -25,7 +25,7 @@ const SectionOne: React.FC = () => {
     <Container>
         <ClockLocal></ClockLocal>
         {alerts !== undefined && alerts.length > 0 && <Alerts />}
-        <Daily1280 />
+        <Daily />
         <AirPollution />
         <Precipitation />
         <SunriseAndSunset />

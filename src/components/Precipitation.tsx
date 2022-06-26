@@ -3,7 +3,7 @@ import { useAppSelector } from "redux/hooks/useTypedSelector";
 import { Container, TextRight, Value } from "styles/StyledPrecipitation";
 import { Title } from "styles/StyledUVIndex";
 
-const Precipitation: React.FC = (): React.ReactElement => {
+const Precipitation: React.FC = () => {
 
     const { rain, snow } = useAppSelector(state => state.currentWeather)
 

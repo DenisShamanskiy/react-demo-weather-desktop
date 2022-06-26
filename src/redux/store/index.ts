@@ -1,4 +1,4 @@
-import { composeWithDevTools } from "@redux-devtools/extension";
+// import { composeWithDevTools } from "@redux-devtools/extension";
 import {compose, legacy_createStore as createStore, combineReducers, applyMiddleware} from "redux";
 import createSagaMiddleware from 'redux-saga'
 import { popupAlertReducer } from "./popupAlertReducer";
@@ -20,7 +20,7 @@ const rootReducer = combineReducers({
     errors: errorsReducer
 })
 
-export const store = createStore(rootReducer, compose(applyMiddleware(sagaMiddleware), composeWithDevTools()))
+export const store = createStore(rootReducer, compose(applyMiddleware(sagaMiddleware), /*composeWithDevTools()*/))
 
 sagaMiddleware.run(rootWatcher)
 

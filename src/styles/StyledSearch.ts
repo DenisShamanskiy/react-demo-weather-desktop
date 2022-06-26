@@ -12,7 +12,7 @@ const Form = styled.form`
   background-color: var(--Bright-Gray);
   transition: 0.3s ease-in-out;
   &:focus-within {
-    background: var(--Spanish-Pink);
+    background: var(--Light-Red);
     transition: 0.3s ease-in-out;
   }
 `;

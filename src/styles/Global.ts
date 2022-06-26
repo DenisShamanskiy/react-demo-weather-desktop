@@ -14,27 +14,20 @@ export default createGlobalStyle`
   --Milk: #FFFDF5;
   --Bright-Gray: #E5E8F0;
   --Black-Coral: #55586B;
+  --Banana-Mania: #FEECB9;
+  --Inchworm: #9EE362;
+  --Diamond: #C2E7FF;
+  --Linen: #FCEFE3;
 
   --Lotion: #FEFDFB;
   --Vista-Blue: #779CDB;
   --Misty-Rose: #FFE2E2;
-  --Spanish-Pink: #FEC1C1;
+  --Light-Red: #FFCFCF;
   /////////
   --Lavender-Gray: #C4BDC9;
   --Manatee: #9393A5;
   --Dust-Storm: #E6CFC8;
   --Eggshell: #F3E5D6;
-  ////////
-  --blue: #8dc6ff;
-  --pink: #f1c6de;
-  --orange: #fecea8;
-  --green: #FED1C4;
-  --green-text: #c2fcd9;
-  --black: #55586B;
-  // Loader //
-
-
-
   
   /* Border */
   --br-20: 20px;

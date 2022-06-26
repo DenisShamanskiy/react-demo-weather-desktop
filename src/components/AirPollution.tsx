@@ -8,16 +8,16 @@ import {
   Item,
   ChemicalFormula,
   Value,
+  Input,
 } from "../styles/StyledAirPollution";
-import { Input } from "../styles/StyledCurrentDetailed";
 import { getDescriptionCAQI } from "utils/functions";
 
-const AirPollution: React.FC = (): React.ReactElement => {
+const AirPollution: React.FC = () => {
 
   const { components, main: { aqi } } = useAppSelector(state => state.airPollution)
   const error = useAppSelector(state => state.errors.errorAirPollution)
 
-  const arrayChemicalFormula: JSX.Element[] = [
+  const arrayChemicalFormula = [
     <ChemicalFormula>CO</ChemicalFormula>,
     <ChemicalFormula>
       NH<sub>3</sub>
@@ -42,8 +42,6 @@ const AirPollution: React.FC = (): React.ReactElement => {
 
   const setValue = (num: number) => error ? "Нет данных" : <span>{num}</span>
 
-
-
   return (
    <Container>
       <Title>Загрязнение воздуха</Title>
@@ -51,7 +49,7 @@ const AirPollution: React.FC = (): React.ReactElement => {
       <Wrapper>
         <Description>{getDescriptionCAQI(aqi)}</Description>
         <Input
-          pollution
+          pollution={true}
           readOnly={true}
           type="range"
           min="1"

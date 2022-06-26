@@ -1,10 +1,10 @@
 import React from "react";
 import { useAppSelector } from "redux/hooks/useTypedSelector";
-import { Input } from "styles/StyledCurrentDetailed1280";
+import { Input } from "styles/StyledAirPollution";
 import { Container, Description, Title, Value } from "styles/StyledUVIndex";
 import { getUviDescription } from "utils/functions";
 
-const UVIndex: React.FC = (): React.ReactElement => {
+const UVIndex: React.FC = () => {
 
     const { current: { uvi } } = useAppSelector(state => state.oneCall)
     
@@ -14,7 +14,7 @@ const UVIndex: React.FC = (): React.ReactElement => {
             <Value>{uvi}</Value>
             <Description>{getUviDescription(uvi)}</Description>
             <Input
-                pollution
+                pollution={false}
                 readOnly={true}
                 type="range"
                 min="0"

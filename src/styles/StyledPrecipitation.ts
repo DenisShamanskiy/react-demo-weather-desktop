@@ -4,10 +4,10 @@ const Container = styled.div`
     grid-row: 5 / 7;
     margin: 0;
     padding: 15px;
+    border-radius: var(--br-20);
     display: flex;
     flex-direction: column;
-    border-radius: var(--br-20);
-    background-color: #ecf2f9;
+    background-color: var(--Lotion);
 `;
 const Value = styled.p`
     grid-column: 1 / 2;

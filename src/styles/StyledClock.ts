@@ -18,8 +18,7 @@ const CityTime = styled.div`
     margin: 0 ;
     font-weight: 600;
 `;
-
-const StyledClockLocal = styled.div`
+const ContainerLocalTime = styled.article`
     grid-column: 1 / 4;
     grid-row: 1 / 3;
     margin: 0 auto auto 0;
@@ -29,9 +28,9 @@ const StyledClockLocal = styled.div`
 `;
 const LocalTime = styled.p`
     margin: 0 auto 25px 0;
+    color: var(--Vista-Blue);
     font-size: 50px;
     font-weight: 700;
-    color: var(--Vista-Blue);;
 `;
 const Col = styled.span`
     animation: ${mymove} 1.1s ease infinite;
@@ -43,9 +42,9 @@ const CurrentDate = styled.p`
 `;
 const Greeting = styled.p`
     margin: 0 auto 0 0;
+    color: var(--Vista-Blue);
     font-size: 35px;
     font-weight: 700;
-    color: var(--Vista-Blue);;
 `;
 
-export { CityTime, StyledClockLocal, LocalTime, Col, CurrentDate, Greeting };
+export { CityTime, ContainerLocalTime, LocalTime, Col, CurrentDate, Greeting };

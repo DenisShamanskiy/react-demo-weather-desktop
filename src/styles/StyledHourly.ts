@@ -31,7 +31,7 @@ const Item = styled.li`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: var(--Spanish-Pink);
+  background-color: var(--Light-Red);
   color: var(--Black-Coral);
   border-radius: var(--br-20);
 `;
