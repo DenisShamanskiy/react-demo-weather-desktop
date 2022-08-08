@@ -1,17 +1,26 @@
 {
   "files": {
-    "main.js": "/react-demo-weather-desktop/static/js/main.2b2d7720.js",
+    "main.js": "/react-demo-weather-desktop/static/js/main.fd6d8f30.js",
     "static/media/compass.svg": "/react-demo-weather-desktop/static/media/compass.b925fa66187572fb09d0772aebdc2c13.svg",
+    "static/media/wi_snow.svg": "/react-demo-weather-desktop/static/media/wi_snow.cd7a4eee2e11c9fe73a71661925fb3ca.svg",
+    "static/media/wi_thermometer-celsius.svg": "/react-demo-weather-desktop/static/media/wi_thermometer-celsius.8e57f73c552695a29f531290451699a0.svg",
+    "static/media/wi_humidity.svg": "/react-demo-weather-desktop/static/media/wi_humidity.f670d15aeed9ff308a750b1763e9c484.svg",
     "index.html": "/react-demo-weather-desktop/index.html",
+    "static/media/wi_rain.svg": "/react-demo-weather-desktop/static/media/wi_rain.6f5ed578a45925a54e35c2c907542188.svg",
+    "static/media/cloud-drizzle.svg": "/react-demo-weather-desktop/static/media/cloud-drizzle.13cd5b50ecd0a562084ccbde010a1e93.svg",
+    "static/media/wi_sunrise.svg": "/react-demo-weather-desktop/static/media/wi_sunrise.dbc53ca11395fdc835e953a9a933fa7a.svg",
+    "static/media/wi_sunset.svg": "/react-demo-weather-desktop/static/media/wi_sunset.1de1a1cc45341b0c2d800af81e153d60.svg",
+    "static/media/wi_windsock.svg": "/react-demo-weather-desktop/static/media/wi_windsock.b70eb950ffd7910f3a7646e2b9b91405.svg",
     "static/media/sunrise.svg": "/react-demo-weather-desktop/static/media/sunrise.dd4616bd95d7de657a7301a15633b12e.svg",
     "static/media/sunset.svg": "/react-demo-weather-desktop/static/media/sunset.b684a39456c23554c62a3b78012b3f46.svg",
+    "static/media/wi_barometer.svg": "/react-demo-weather-desktop/static/media/wi_barometer.2b00fc75a283705167b58f376ea67f03.svg",
     "static/media/exclamation-circle.svg": "/react-demo-weather-desktop/static/media/exclamation-circle.194a23bb2dc625a92e902188f749eeaa.svg",
     "static/media/plus-circle.svg": "/react-demo-weather-desktop/static/media/plus-circle.b17567d34e9c93e07243549951bffc53.svg",
     "static/media/search.svg": "/react-demo-weather-desktop/static/media/search.60a61a8c9476ac944225fa032d8b8aa6.svg",
     "static/media/dash-circle.svg": "/react-demo-weather-desktop/static/media/dash-circle.4ba348147757cc03172220a22cac0818.svg",
-    "main.2b2d7720.js.map": "/react-demo-weather-desktop/static/js/main.2b2d7720.js.map"
+    "main.fd6d8f30.js.map": "/react-demo-weather-desktop/static/js/main.fd6d8f30.js.map"
   },
   "entrypoints": [
-    "static/js/main.2b2d7720.js"
+    "static/js/main.fd6d8f30.js"
   ]
 }
